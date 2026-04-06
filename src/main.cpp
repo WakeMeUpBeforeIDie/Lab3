@@ -1,3 +1,4 @@
+// Copyright 2022 UNN-IASR
 #include "Automata.h"
 #include <iostream>
 int main() {
@@ -6,7 +7,7 @@ int main() {
     vending.on();
     vending.getMenu();
     std::cout << "\nPutting coins in" << std::endl;
-    for(int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++) {
         vending.coin();
     }
     vending.choice();
@@ -17,7 +18,7 @@ int main() {
     vending.choice();
     vending.cook(3);
     std::cout << "\nAdding some money" << std::endl;
-    for(int i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++) {
         vending.coin();
     }
     vending.choice();
