@@ -5,8 +5,8 @@ enum STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 class Automata {
 private:
 double cash;
-std::string[] menu = ["coffee", "black tea", "green tea", "cola"];
-double[] prices = [35.75, 20.34, 20.22, 134.47];
+std::string[4] menu = ["coffee", "black tea", "green tea", "cola"];
+double[4] prices = [35.75, 20.34, 20.22, 134.47];
 STATES state;
 public:
 Automata();
@@ -20,5 +20,5 @@ bool check();
 void cancel();
 void cook();
 void finish();
-}
+};
 #endif
