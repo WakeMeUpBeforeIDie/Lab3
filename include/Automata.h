@@ -18,7 +18,7 @@ STATES getState();
 void choice();
 bool check(int index);
 void cancel();
-void cook();
+void cook(int index);
 void finish();
 };
 #endif
