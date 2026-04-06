@@ -15,7 +15,7 @@ void off();
 void coin();
 void getMenu();
 STATES getState();
-void choice();
+void choice(int index);
 bool check();
 void cancel();
 void cook();
