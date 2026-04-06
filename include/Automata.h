@@ -1,14 +1,15 @@
-#ifndef AUTOMATA_H
-#define AUTOMATA_H
+// Copyright 2022 UNN-IASR
+#ifndef AUTOMATA_H_
+#define AUTOMATA_H_
 #include <string>
 enum STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 class Automata {
-private:
+private: 
     double cash;
     std::string menu[4];
     double prices[4];
     STATES state;
-public:
+public: 
     Automata();
     void on();
     void off();
@@ -21,4 +22,4 @@ public:
     void cook(int index);
     void finish();
 };
-#endif
+#endif // INCLUDE_AUTOMATA_H_
