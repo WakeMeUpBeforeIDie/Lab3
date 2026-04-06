@@ -1,7 +1,7 @@
 #ifndef AUTOMATA_H
 #define AUTOMATA_H
 #include <string>
-enum STATES = {OFF, WAIT, ACCEPT, CHECK, COOK};
+enum STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 class Automata {
 private:
 double cash;
