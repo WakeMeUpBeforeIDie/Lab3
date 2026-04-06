@@ -2,7 +2,8 @@
 #include "Automata.h"
 #include <iostream>
 #include <string>
-using namespace std;
+using std::cout;
+using std::endl;
 Automata::Automata() : cash(0.0), state(OFF) {
     menu[0] = "coffee";
     menu[1] = "black tea";
