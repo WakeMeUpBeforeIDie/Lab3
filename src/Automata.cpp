@@ -1,3 +1,4 @@
+// Copyright 2022 UNN-IASR
 #include "Automata.h"
 #include <iostream>
 #include <string>
@@ -40,7 +41,7 @@ void Automata::coin() {
 void Automata::getMenu() {
     std::cout << "Menu:" << std::endl;
     for (int i = 0; i < 4; i++) {
-        std::cout << i + 1 << ". " << menu[i] << " costs " << prices[i] << std::endl;
+        std::cout<<i + 1<<". "<<menu[i]<<" costs "<< prices[i]<<std::endl;
     }
 }
 STATES Automata::getState() {
@@ -52,7 +53,7 @@ void Automata::choice() {
         std::cout << "Make your choice (enter number 1-4):" << std::endl;
         getMenu();
     } else {
-        std::cout << "Cannot make choice now. Current state: " << state << std::endl;
+        std::cout<<"Cant choose.Current state: "<<state<<std::endl;
     }
 }
 bool Automata::check(int index) {
@@ -62,9 +63,9 @@ bool Automata::check(int index) {
     }
     bool sufficient = cash >= prices[index];
     if (sufficient) {
-        std::cout << "Sufficient funds. Price: " << prices[index]<< ", Your balance: " << cash << std::endl;
+        std::cout<<"Enough funds. Price: " << prices[index]<< ", Your balance: "<<cash<<std::endl;
     } else {
-        std::cout << "Insufficient funds. Need: " << prices[index] - cash << " more" << std::endl;
+        std::cout<<"Insufficient funds. Need: "<<prices[index]-cash<<" more"<<std::endl;
     }
     return sufficient;
 }
@@ -90,7 +91,7 @@ void Automata::cook(int index) {
 }
 void Automata::finish() {
     if (state == COOK) {
-        std::cout << "Automata has been brought back into waiting state." << std::endl;
+        std::cout<<"Automata brought back into waiting."<<std::endl;
         if (cash > 0) {
             std::cout << "Change returned: " << cash << " rub" << std::endl;
             cash = 0;
