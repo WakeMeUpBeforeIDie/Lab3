@@ -2,6 +2,7 @@
 #include "Automata.h"
 #include <iostream>
 #include <string>
+using namespace std;
 Automata::Automata() : cash(0.0), state(OFF) {
     menu[0] = "coffee";
     menu[1] = "black tea";
@@ -41,7 +42,7 @@ void Automata::coin() {
 void Automata::getMenu() {
     std::cout << "Menu:" << std::endl;
     for (int i = 0; i < 4; i++) {
-        std::cout<<i + 1<<". "<<menu[i]<<" costs "<< prices[i]<<std::endl;
+        cout << i+1 << ". " << menu[i] << " costs " << prices[i] << endl;
     }
 }
 STATES Automata::getState() {
@@ -53,7 +54,7 @@ void Automata::choice() {
         std::cout << "Make your choice (enter number 1-4):" << std::endl;
         getMenu();
     } else {
-        std::cout<<"Cant choose.Current state: "<<state<<std::endl;
+        cout << "Cant choose.Current state: " << state << endl;
     }
 }
 bool Automata::check(int index) {
@@ -63,9 +64,11 @@ bool Automata::check(int index) {
     }
     bool sufficient = cash >= prices[index];
     if (sufficient) {
-        std::cout<<"Enough funds. Price: " << prices[index]<< ", Your balance: "<<cash<<std::endl;
+        cout << "Enough funds. Price: " << prices[index];
+        cout << ", Your balance: " << cash << endl;
     } else {
-        std::cout<<"Insufficient funds. Need: "<<prices[index]-cash<<" more"<<std::endl;
+        cout << "Insufficient funds. Need: ";
+        cout << prices[index]-cash << " more" << endl;
     }
     return sufficient;
 }
@@ -91,7 +94,7 @@ void Automata::cook(int index) {
 }
 void Automata::finish() {
     if (state == COOK) {
-        std::cout<<"Automata brought back into waiting."<<std::endl;
+        cout << "Automata brought back into waiting." << endl;
         if (cash > 0) {
             std::cout << "Change returned: " << cash << " rub" << std::endl;
             cash = 0;
