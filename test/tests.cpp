@@ -1,3 +1,4 @@
+// Copyright 2022 UNN-IASR
 #include <gtest/gtest.h>
 #include "Automata.h"
 TEST(AutomataTest, test1) {
@@ -31,7 +32,7 @@ TEST(AutomataTest, test5) {
 TEST(AutomataTest, test6) {
   Automata automata;
   automata.on();
-  for(int i = 0; i < 4; i++) {
+  for (int i = 0; i < 4; i++) {
       automata.coin();
   }
   EXPECT_TRUE(automata.check(1));
@@ -53,7 +54,7 @@ TEST(AutomataTest, test8) {
 TEST(AutomataTest, test9) {
   Automata automata;
   automata.on();
-  for(int i = 0; i < 4; i++) {
+  for (int i = 0; i < 4; i++) {
       automata.coin();
   }
   automata.choice();
